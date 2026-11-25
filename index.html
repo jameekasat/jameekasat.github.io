@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PC91CC官网入口 - 智能影音娱乐平台 | 海量高清视频社区</title>
+<meta name="description" content="PC91CC官网入口是面向全年龄段的智能影音娱乐平台，提供海量高清视频内容与活跃社区，探索PC91CC带来的流畅观影与互动体验。">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --main-bg: #0a0e17;
+  --panel-bg: #111827;
+  --card-bg: #151d2e;
+  --accent: #3b82f6;
+  --accent2: #06b6d4;
+  --accent3: #8b5cf6;
+  --text: #e5e7eb;
+  --text-dim: #9ca3af;
+  --border: #1f2a3d;
+  --radius: 14px;
+  --shadow: 0 8px 28px rgba(0,0,0,.45);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: var(--main-bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ============ 顶部导航 ============ */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(10,14,23,.82);
+  border-bottom: 1px solid var(--border);
+}
+.nav-wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 22px; font-weight: 800; letter-spacing: .5px;
+}
+.logo-mark {
+  width: 38px; height: 38px; border-radius: 11px;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: #fff; font-weight: 900;
+  box-shadow: 0 4px 14px rgba(59,130,246,.4);
+}
+.logo-text span { color: var(--accent2); }
+.nav-links { display: flex; gap: 32px; font-size: 15px; }
+.nav-links a { color: var(--text-dim); transition: color .25s; position: relative; }
+.nav-links a:hover { color: var(--text); }
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; bottom: -6px;
+  width: 0; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width .3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  padding: 10px 22px; border-radius: 30px; font-size: 14px; font-weight: 600;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  color: #fff; box-shadow: 0 4px 16px rgba(59,130,246,.38);
+  transition: transform .25s, box-shadow .25s;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59,130,246,.55); }
+.menu-toggle { display: none; font-size: 26px; background: none; border: none; color: var(--text); cursor: pointer; }
+
+/* ============ Hero ============ */
+.hero {
+  position: relative; padding: 96px 0 84px; overflow: hidden;
+  background:
+    radial-gradient(ellipse 900px 420px at 78% 0%, rgba(59,130,246,.16), transparent 60%),
+    radial-gradient(ellipse 700px 380px at 12% 18%, rgba(139,92,246,.13), transparent 65%);
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border-radius: 30px; font-size: 13px;
+  background: rgba(6,182,212,.12); border: 1px solid rgba(6,182,212,.35);
+  color: var(--accent2); margin-bottom: 24px;
+}
+.hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent2); box-shadow: 0 0 10px var(--accent2); animation: pulse 1.8s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.8);} }
+.hero h1 {
+  font-size: 52px; line-height: 1.18; font-weight: 900; letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.hero h1 .grad {
+  background: linear-gradient(120deg, var(--accent2), var(--accent), var(--accent3));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero p.lead {
+  font-size: 17px; color: var(--text-dim); max-width: 560px; margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
+.btn-primary {
+  padding: 14px 34px; border-radius: 32px; font-size: 16px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent3)); color: #fff;
+  box-shadow: 0 6px 22px rgba(59,130,246,.45);
+  transition: transform .25s, box-shadow .25s;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 34px rgba(59,130,246,.6); }
+.btn-ghost {
+  padding: 14px 34px; border-radius: 32px; font-size: 16px; font-weight: 600;
+  border: 1px solid var(--border); color: var(--text); background: rgba(255,255,255,.02);
+  transition: border-color .25s, background .25s;
+}
+.btn-ghost:hover { border-color: var(--accent2); background: rgba(6,182,212,.08); }
+.hero-stats { display: flex; gap: 44px; flex-wrap: wrap; }
+.hero-stats .stat .num { font-size: 28px; font-weight: 800; color: #fff; }
+.hero-stats .stat .num em { font-style: normal; color: var(--accent2); font-size: 20px; }
+.hero-stats .stat .lbl { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+
+/* Hero 视觉：播放器卡片 */
+.player-visual {
+  position: relative; border-radius: 22px; overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, #131c2e, #0c1220);
+  box-shadow: var(--shadow);
+  aspect-ratio: 16/10;
+  display: flex; align-items: center; justify-content: center;
+}
+.player-visual svg { width: 100%; height: 100%; }
+.play-ring {
+  position: absolute; width: 84px; height: 84px; border-radius: 50%;
+  background: rgba(255,255,255,.1); backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.28);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .3s, background .3s;
+}
+.play-ring::before {
+  content: ""; width: 0; height: 0;
+  border-left: 22px solid #fff; border-top: 14px solid transparent; border-bottom: 14px solid transparent;
+  margin-left: 6px;
+}
+.player-visual:hover .play-ring { transform: scale(1.08); background: rgba(59,130,246,.35); }
+.player-tag {
+  position: absolute; left: 18px; bottom: 16px; font-size: 12px; letter-spacing: 1px;
+  padding: 5px 14px; border-radius: 20px; background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.12); color: #cbd5e1;
+}
+.player-res {
+  position: absolute; right: 18px; top: 16px; font-size: 11px; font-weight: 700;
+  padding: 4px 10px; border-radius: 6px; background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff; letter-spacing: .5px;
+}
+
+/* ============ 通用 section 标题 ============ */
+.section { padding: 88px 0; }
+.section-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+.section-head .eyebrow {
+  display: inline-block; font-size: 13px; letter-spacing: 3px; font-weight: 700;
+  color: var(--accent2); text-transform: uppercase; margin-bottom: 14px;
+}
+.section-head h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; letter-spacing: .5px; }
+.section-head p { color: var(--text-dim); font-size: 16px; }
+
+/* ============ 内容分类 tabs ============ */
+.tabs { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+.tab-btn {
+  padding: 9px 24px; border-radius: 26px; font-size: 14px; cursor: pointer;
+  border: 1px solid var(--border); background: transparent; color: var(--text-dim);
+  transition: all .25s; font-family: inherit;
+}
+.tab-btn:hover { color: var(--text); border-color: rgba(59,130,246,.5); }
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  color: #fff; border-color: transparent; box-shadow: 0 4px 16px rgba(59,130,246,.4);
+}
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.video-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; transition: transform .3s, border-color .3s, box-shadow .3s;
+  cursor: pointer;
+}
+.video-card:hover { transform: translateY(-6px); border-color: rgba(59,130,246,.55); box-shadow: 0 14px 34px rgba(0,0,0,.55); }
+.video-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+.video-thumb svg { width: 100%; height: 100%; transition: transform .45s; }
+.video-card:hover .video-thumb svg { transform: scale(1.06); }
+.video-duration {
+  position: absolute; right: 10px; bottom: 10px; font-size: 11px; font-weight: 600;
+  padding: 3px 8px; border-radius: 5px; background: rgba(0,0,0,.7); color: #e2e8f0;
+}
+.video-body { padding: 18px 20px 22px; }
+.video-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.video-body p { font-size: 13.5px; color: var(--text-dim); margin-bottom: 14px; min-height: 42px; }
+.video-meta { display: flex; justify-content: space-between; font-size: 12px; color: #6b7280; }
+.video-meta .cat { color: var(--accent2); }
+
+/* ============ 特性 ============ */
+.features { background: linear-gradient(180deg, transparent, rgba(17,24,39,.55), transparent); }
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.feature-card {
+  padding: 34px 26px; border-radius: var(--radius); background: var(--panel-bg);
+  border: 1px solid var(--border); transition: transform .3s, border-color .3s;
+  position: relative; overflow: hidden;
+}
+.feature-card::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+  opacity: 0; transition: opacity .3s;
+}
+.feature-card:hover { transform: translateY(-6px); border-color: rgba(6,182,212,.4); }
+.feature-card:hover::before { opacity: 1; }
+.feature-icon {
+  width: 54px; height: 54px; border-radius: 14px; margin-bottom: 22px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, rgba(59,130,246,.16), rgba(139,92,246,.16));
+  border: 1px solid rgba(59,130,246,.3);
+}
+.feature-icon svg { width: 26px; height: 26px; stroke: var(--accent2); fill: none; stroke-width: 1.8; }
+.feature-card h3 { font-size: 18px; margin-bottom: 10px; }
+.feature-card p { font-size: 14px; color: var(--text-dim); }
+
+/* ============ 内容专题 (大图文块) ============ */
+.topic-list { display: flex; flex-direction: column; gap: 28px; }
+.topic-item {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border-radius: 20px; overflow: hidden; border: 1px solid var(--border);
+  background: var(--panel-bg);
+  transition: border-color .3s, box-shadow .3s;
+}
+.topic-item:hover { border-color: rgba(139,92,246,.45); box-shadow: 0 12px 36px rgba(0,0,0,.45); }
+.topic-item:nth-child(even) .topic-media { order: 2; }
+.topic-media { min-height: 300px; position: relative; }
+.topic-media svg { width: 100%; height: 100%; position: absolute; inset: 0; }
+.topic-content { padding: 44px 42px; display: flex; flex-direction: column; justify-content: center; }
+.topic-content .tag {
+  align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px;
+  padding: 4px 14px; border-radius: 20px; margin-bottom: 18px;
+  background: rgba(139,92,246,.14); color: #a78bfa; border: 1px solid rgba(139,92,246,.35);
+}
+.topic-content h3 { font-size: 26px; margin-bottom: 14px; line-height: 1.35; }
+.topic-content p { color: var(--text-dim); font-size: 14.5px; margin-bottom: 22px; }
+.topic-content .link-more { font-size: 14px; font-weight: 600; color: var(--accent2); }
+.topic-content .link-more:hover { text-decoration: underline; }
+
+/* ============ 社区 ============ */
+.community {
+  background:
+    radial-gradient(ellipse 800px 400px at 50% 0%, rgba(59,130,246,.1), transparent 70%);
+}
+.community-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
+.post-card {
+  padding: 26px; border-radius: var(--radius); background: var(--card-bg);
+  border: 1px solid var(--border); transition: transform .3s, border-color .3s;
+}
+.post-card:hover { transform: translateY(-5px); border-color: rgba(59,130,246,.45); }
+.post-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.avatar {
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; color: #fff;
+}
+.avatar.a1 { background: linear-gradient(135deg,#3b82f6,#06b6d4); }
+.avatar.a2 { background: linear-gradient(135deg,#8b5cf6,#ec4899); }
+.avatar.a3 { background: linear-gradient(135deg,#f59e0b,#ef4444); }
+.post-head .who .name { font-size: 14px; font-weight: 700; }
+.post-head .who .time { font-size: 12px; color: #6b7280; }
+.post-card p { font-size: 14px; color: var(--text-dim); margin-bottom: 18px; }
+.post-foot { display: flex; gap: 18px; font-size: 12.5px; color: #6b7280; }
+.post-foot span { display: inline-flex; align-items: center; gap: 5px; }
+.post-foot svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+
+/* 安装/入口 面板 */
+.entry-panel {
+  border-radius: 22px; padding: 46px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px;
+  background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(139,92,246,.1));
+  border: 1px solid rgba(59,130,246,.3); align-items: center;
+}
+.entry-panel h3 { font-size: 26px; margin-bottom: 14px; }
+.entry-panel p { color: var(--text-dim); font-size: 14.5px; margin-bottom: 24px; }
+.entry-steps { display: flex; gap: 26px; flex-wrap: wrap; }
+.entry-step { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.entry-step .n {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent3)); color: #fff;
+}
+.qr-box {
+  width: 190px; height: 190px; border-radius: 16px; background: #fff; padding: 14px;
+  margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+.qr-box svg { width: 100%; height: 100%; }
+.qr-label { text-align: center; font-size: 12.5px; color: var(--text-dim); margin-top: 12px; }
+
+/* ============ 数据/信任 ============ */
+.trust { padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.trust-grid .num { font-size: 36px; font-weight: 900; background: linear-gradient(120deg,var(--accent2),var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.trust-grid .lbl { font-size: 13.5px; color: var(--text-dim); margin-top: 4px; }
+
+/* ============ FAQ ============ */
+.faq-list { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.faq-item {
+  border: 1px solid var(--border); border-radius: 14px; background: var(--panel-bg);
+  overflow: hidden; transition: border-color .3s;
+}
+.faq-item.open { border-color: rgba(59,130,246,.5); }
+.faq-q {
+  width: 100%; text-align: left; padding: 20px 24px; font-size: 15.5px; font-weight: 600;
+  background: none; border: none; color: var(--text); cursor: pointer; font-family: inherit;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.faq-q .chev { transition: transform .3s; color: var(--accent2); flex-shrink: 0; }
+.faq-item.open .chev { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+.faq-a p { padding: 0 24px 22px; font-size: 14px; color: var(--text-dim); }
+
+/* ============ CTA ============ */
+.cta-final { padding: 90px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-final::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 620px 300px at 50% 50%, rgba(59,130,246,.18), transparent 70%);
+}
+.cta-final h2 { font-size: 38px; font-weight: 900; margin-bottom: 18px; position: relative; }
+.cta-final p { color: var(--text-dim); font-size: 16px; max-width: 560px; margin: 0 auto 36px; position: relative; }
+.cta-final .hero-actions { justify-content: center; position: relative; }
+
+/* ============ 页脚 ============ */
+footer { border-top: 1px solid var(--border); padding: 60px 0 34px; background: #080c14; }
+.foot-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
+.foot-brand p { font-size: 13.5px; color: var(--text-dim); margin-top: 16px; max-width: 300px; }
+.foot-col h4 { font-size: 14.5px; margin-bottom: 18px; }
+.foot-col a { display: block; font-size: 13.5px; color: var(--text-dim); margin-bottom: 12px; transition: color .25s; }
+.foot-col a:hover { color: var(--accent2); }
+.foot-bottom { border-top: 1px solid var(--border); padding-top: 26px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: #6b7280; }
+.foot-bottom .links { display: flex; gap: 20px; }
+.foot-bottom a:hover { color: var(--text-dim); }
+
+/* ============ 动效 ============ */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ============ 响应式 ============ */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 42px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+  .community-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .foot-top { grid-template-columns: 1fr 1fr; }
+  .entry-panel { grid-template-columns: 1fr; }
+  .topic-item { grid-template-columns: 1fr; }
+  .topic-item:nth-child(even) .topic-media { order: 0; }
+  .topic-media { min-height: 240px; }
+}
+@media (max-width: 720px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-links.mobile-open {
+    display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0;
+    background: rgba(10,14,23,.97); padding: 20px 24px 26px; gap: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .menu-toggle { display: block; }
+  .hero { padding: 64px 0 60px; }
+  .hero h1 { font-size: 34px; }
+  .section { padding: 64px 0; }
+  .section-head h2 { font-size: 28px; }
+  .video-grid, .community-grid, .feature-grid { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 18px; }
+  .hero-stats { gap: 30px; }
+  .topic-content { padding: 30px 24px; }
+  .entry-panel { padding: 30px 24px; }
+  .cta-final h2 { font-size: 28px; }
+  .foot-top { grid-template-columns: 1fr; gap: 30px; }
+  .foot-bottom { flex-direction: column; }
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ================= 导航 ================= -->
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="#top" class="logo">
+      <span class="logo-mark">P</span>
+      <span class="logo-text">PC91<span>CC</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#channels">内容频道</a>
+      <a href="#features">平台优势</a>
+      <a href="#topics">精选专题</a>
+      <a href="#community">社区动态</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#entry" class="nav-cta">进入官网</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开菜单">☰</button>
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> PC91CC 全新首页 · 社区在线</div>
+      <h1>PC91CC<span class="grad">官网入口</span><br>打开属于你的影音世界</h1>
+      <p class="lead">这是一个为热爱观看、乐于分享的你准备的高清视频平台。从电影剧集到生活记录，从专业解说到创意短片，PC91CC 汇集多元内容，让每一次点击都有惊喜。</p>
+      <div class="hero-actions">
+        <a href="#channels" class="btn-primary">立即探索内容</a>
+        <a href="#entry" class="btn-ghost">了解入口方式</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num" data-count="12800">0<em>+</em></div><div class="lbl">高清内容储备</div></div>
+        <div class="stat"><div class="num" data-count="320">0<em>万</em></div><div class="lbl">注册影迷用户</div></div>
+        <div class="stat"><div class="num" data-count="98">0<em>%</em></div><div class="lbl">播放流畅率</div></div>
+      </div>
+    </div>
+    <div class="player-visual reveal">
+      <div class="player-res">4K HDR</div>
+      <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PC91CC 播放器界面示意">
+        <defs>
+          <linearGradient id="pv1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0e7490"/>
+          </linearGradient>
+          <linearGradient id="pv2" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#7c3aed"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+            <stop offset="0" stop-color="#3b82f6" stop-opacity=".5"/>
+            <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="640" height="400" fill="#0c1220"/>
+        <rect width="640" height="400" fill="url(#glow)"/>
+        <circle cx="180" cy="130" r="90" fill="url(#pv2)" opacity=".55"/>
+        <circle cx="500" cy="290" r="110" fill="url(#pv1)" opacity=".5"/>
+        <path d="M0 330 Q160 250 320 320 T640 300 L640 400 L0 400 Z" fill="#0f172a" opacity=".9"/>
+        <rect x="44" y="40" width="120" height="8" rx="4" fill="#334155"/>
+        <rect x="44" y="58" width="76" height="8" rx="4" fill="#1e293b"/>
+        <rect x="470" y="40" width="126" height="8" rx="4" fill="#334155"/>
+        <rect x="44" y="342" width="552" height="6" rx="3" fill="#1e293b"/>
+        <rect x="44" y="342" width="330" height="6" rx="3" fill="#3b82f6"/>
+        <circle cx="374" cy="345" r="8" fill="#06b6d4"/>
+        <rect x="44" y="364" width="42" height="8" rx="3" fill="#334155"/>
+        <rect x="98" y="364" width="42" height="8" rx="3" fill="#1e293b"/>
+        <rect x="486" y="364" width="110" height="8" rx="3" fill="#1e293b"/>
+        <text x="44" y="300" fill="#64748b" font-size="13" font-family="sans-serif">PC91CC · 高清放映厅</text>
+      </svg>
+      <div class="play-ring"></div>
+      <div class="player-tag">正在热播 · 精选推荐</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 内容频道 ================= -->
+<section class="section" id="channels">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Content Channels</span>
+      <h2>多频道内容，随心切换</h2>
+      <p>PC91CC 官网入口以清晰的内容分区呈现视频资源。无论你偏爱剧情长片、纪实影像，还是轻松的生活短片，都能在这里快速找到属于自己的频道。</p>
+    </div>
+
+    <div class="tabs reveal">
+      <button class="tab-btn active" data-tab="all">全部</button>
+      <button class="tab-btn" data-tab="movie">影视剧场</button>
+      <button class="tab-btn" data-tab="doc">纪实人文</button>
+      <button class="tab-btn" data-tab="life">生活纪实</button>
+      <button class="tab-btn" data-tab="know">知识科普</button>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+      <!-- 卡片由 JS 渲染占位，同时保留静态内容用于无脚本环境 -->
+      <article class="video-card reveal" data-cat="movie">
+        <div class="video-thumb">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="t1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#t1)"/>
+            <circle cx="320" cy="60" r="52" fill="#fff" opacity=".08"/>
+            <path d="M0 175 Q100 120 200 165 T400 150 L400 225 L0 225 Z" fill="#0a0e17" opacity=".55"/>
+            <rect x="30" y="30" width="70" height="6" rx="3" fill="#e0f2fe" opacity=".6"/>
+            <rect x="30" y="46" width="44" height="6" rx="3" fill="#e0f2fe" opacity=".3"/>
+          </svg>
+          <span class="video-duration">32:18</span>
+        </div>
+        <div class="video-body">
+          <h3>星河彼岸的约定</h3>
+          <p>一段跨越时空的温柔叙事，用光影记录每一次靠近与告别。</p>
+          <div class="video-meta"><span class="cat">影视剧场</span><span>★ 4.8</span></div>
+        </div>
+      </article>
+
+      <article class="video-card reveal" data-cat="doc">
+        <div class="video-thumb">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="t2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#065f46"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#t2)"/>
+            <path d="M50 180 L120 90 L180 140 L250 70 L330 160 L400 120 L400 225 L50 225 Z" fill="#022c22" opacity=".5"/>
+            <circle cx="90" cy="55" r="30" fill="#fbbf24" opacity=".18"/>
+            <rect x="30" y="30" width="80" height="6" rx="3" fill="#d1fae5" opacity=".55"/>
+          </svg>
+          <span class="video-duration">48:05</span>
+        </div>
+        <div class="video-body">
+          <h3>山海之间的呼吸</h3>
+          <p>跟随镜头走进自然深处，聆听风、水与土地共同讲述的故事。</p>
+          <div class="video-meta"><span class="cat">纪实人文</span><span>★ 4.9</span></div>
+        </div>
+      </article>
+
+      <article class="video-card reveal" data-cat="life">
+        <div class="video-thumb">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="t3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#be123c"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#t3)"/>
+            <rect x="60" y="90" width="90" height="70" rx="8" fill="#fff" opacity=".1"/>
+            <rect x="180" y="70" width="110" height="90" rx="8" fill="#fff" opacity=".08"/>
+            <circle cx="320" cy="150" r="46" fill="#fbbf24" opacity=".14"/>
+            <rect x="30" y="30" width="70" height="6" rx="3" fill="#fee2e2" opacity=".55"/>
+          </svg>
+          <span class="video-duration">21:44</span>
+        </div>
+        <div class="video-body">
+          <h3>周末小厨房日记</h3>
+          <p>一道家常菜的温度，从备料到上桌，慢下来感受生活的滋味。</p>
+          <div class="video-meta"><span class="cat">生活纪实</span><span>★ 4.7</span></div>
+        </div>
+      </article>
+
+      <article class="video-card reveal" data-cat="know">
+        <div class="video-thumb">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="t4" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#t4)"/>
+            <circle cx="200" cy="112" r="56" fill="none" stroke="#c4b5fd" stroke-width="2" opacity=".45"/>
+            <circle cx="200" cy="112" r="30" fill="none" stroke="#a78bfa" stroke-width="2" opacity=".6"/>
+            <path d="M200 56 V168 M144 112 H256" stroke="#c4b5fd" stroke-width="1.6" opacity=".35"/>
+            <rect x="30" y="30" width="86" height="6" rx="3" fill="#ede9fe" opacity=".55"/>
+          </svg>
+          <span class="video-duration">15:30</span>
+        </div>
+        <div class="video-body">
+          <h3>五分钟读懂影像编码</h3>
+          <p>用通俗的语言拆解视频画质背后的技术逻辑，让观看更有门道。</p>
+          <div class="video-meta"><span class="cat">知识科普</span><span>★ 4.8</span></div>
+        </div>
+      </article>
+
+      <article class="video-card reveal" data-cat="movie">
+        <div class="video-thumb">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="t5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#831843"/><stop offset="1" stop-color="#4c1d95"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#t5)"/>
+            <rect x="120" y="60" width="160" height="105" rx="10" fill="#fff" opacity=".09"/>
+            <circle cx="200" cy="112" r="26" fill="#fff" opacity=".14"/>
+            <rect x="30" y="30" width="76" height="6" rx="3" fill="#fce7f3" opacity=".55"/>
+          </svg>
+          <span class="video-duration">58:12</span>
+        </div>
+        <div class="video-body">
+          <h3>长夜里的旅途</h3>
+          <p>一部关于选择与坚持的剧情长片，在安静的夜色中缓缓展开。</p>
+          <div class="video-meta"><span class="cat">影视剧场</span><span>★ 4.6</span></div>
+        </div>
+      </article>
+
+      <article class="video-card reveal" data-cat="doc">
+        <div class="video-thumb">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="t6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#164e63"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#t6)"/>
+            <path d="M40 160 L110 100 L180 150 L260 80 L350 150 L400 130 L400 225 L40 225 Z" fill="#082f49" opacity=".55"/>
+            <circle cx="300" cy="55" r="34" fill="#67e8f9" opacity=".16"/>
+            <rect x="30" y="30" width="90" height="6" rx="3" fill="#cffafe" opacity=".5"/>
+          </svg>
+          <span class="video-duration">36:48</span>
+        </div>
+        <div class="video-body">
+          <h3>古建筑里的时光</h3>
+          <p>以建筑为线索，回望城市的历史纹理与人文记忆。</p>
+          <div class="video-meta"><span class="cat">纪实人文</span><span>★ 4.9</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 平台优势 ================= -->
+<section class="section features" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why PC91CC</span>
+      <h2>为什么选择 PC91CC</h2>
+      <p>从播放体验到社区氛围，PC91CC 官网入口始终围绕「看得舒服、用得顺手」打磨细节，让高质量的视频体验成为一种日常。</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
+        </div>
+        <h3>高清画质</h3>
+        <p>支持多档清晰度自适应，从标清到超清平滑切换，弱网环境下依然保持稳定播放。</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <h3>秒开体验</h3>
+        <p>页面与播放器深度优化，减少等待时间，进入官网入口即可快速开始观看。</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>安心浏览</h3>
+        <p>重视用户隐私与内容安全，持续完善浏览环境与账号保护机制。</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9.5" r="2.4"/><path d="M16 14.2c2.9.2 5 2.6 5 5.8"/></svg>
+        </div>
+        <h3>活跃社区</h3>
+        <p>影评、讨论、收藏与分享，和志同道合的影迷一起交流每一次观影感受。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据信任 ================= -->
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="reveal"><div class="num">12800+</div><div class="lbl">高清内容储备</div></div>
+    <div class="reveal"><div class="num">320万</div><div class="lbl">注册影迷用户</div></div>
+    <div class="reveal"><div class="num">98%</div><div class="lbl">播放流畅率</div></div>
+    <div class="reveal"><div class="num">7×24h</div><div class="lbl">内容更新与客服在线</div></div>
+  </div>
+</section>
+
+<!-- ================= 精选专题 ================= -->
+<section class="section" id="topics">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Featured Topics</span>
+      <h2>精选专题，深入观看</h2>
+      <p>围绕不同主题，PC91CC 将分散的视频内容串联成完整叙事，帮助你在有限的时间里，看到更有价值的内容。</p>
+    </div>
+    <div class="topic-list">
+      <article class="topic-item reveal">
+        <div class="topic-media">
+          <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="tp1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient></defs>
+            <rect width="560" height="420" fill="url(#tp1)"/>
+            <circle cx="430" cy="100" r="100" fill="#fff" opacity=".07"/>
+            <path d="M0 320 Q140 230 280 300 T560 270 L560 420 L0 420 Z" fill="#06111f" opacity=".6"/>
+            <rect x="50" y="60" width="120" height="9" rx="4" fill="#ccfbf1" opacity=".55"/>
+            <rect x="50" y="82" width="82" height="9" rx="4" fill="#ccfbf1" opacity=".3"/>
+          </svg>
+        </div>
+        <div class="topic-content">
+          <span class="tag">年度企划</span>
+          <h3>光影四季 · 影像里的自然与时间</h3>
+          <p>从春日的溪流到冬夜的灯火，我们整理了一组与自然节律相关的视频内容，用镜头语言记录四季更替中那些容易被忽略的细节，带你在快节奏生活里重新放慢脚步。</p>
+          <a href="#channels" class="link-more">进入专题 →</a>
+        </div>
+      </article>
+
+      <article class="topic-item reveal">
+        <div class="topic-media">
+          <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="tp2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#701a75"/></linearGradient></defs>
+            <rect width="560" height="420" fill="url(#tp2)"/>
+            <rect x="90" y="120" width="180" height="160" rx="14" fill="#fff" opacity=".08"/>
+            <rect x="300" y="80" width="160" height="240" rx="14" fill="#fff" opacity=".05"/>
+            <circle cx="150" cy="70" r="60" fill="#fbbf24" opacity=".12"/>
+            <rect x="50" y="60" width="100" height="9" rx="4" fill="#ffedd5" opacity=".55"/>
+          </svg>
+        </div>
+        <div class="topic-content">
+          <span class="tag">社区共创</span>
+          <h3>影迷票选 · 那些值得反复观看的片段</h3>
+          <p>由社区成员共同提名与投票，选出过去一年最受欢迎的影像片段。这里既有高口碑剧情长片，也有温暖治愈的生活记录，每一个片段背后都有一段真实的情感共鸣。</p>
+          <a href="#community" class="link-more">查看榜单 →</a>
+        </div>
+      </article>
+
+      <article class="topic-item reveal">
+        <div class="topic-media">
+          <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="tp3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e40af"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs>
+            <rect width="560" height="420" fill="url(#tp3)"/>
+            <circle cx="280" cy="200" r="120" fill="none" stroke="#93c5fd" stroke-width="2" opacity=".35"/>
+            <circle cx="280" cy="200" r="70" fill="none" stroke="#bfdbfe" stroke-width="2" opacity=".45"/>
+            <path d="M280 80 V320 M160 200 H400" stroke="#93c5fd" stroke-width="1.6" opacity=".3"/>
+            <rect x="50" y="60" width="110" height="9" rx="4" fill="#dbeafe" opacity=".55"/>
+          </svg>
+        </div>
+        <div class="topic-content">
+          <span class="tag">技术观察</span>
+          <h3>画质实验室 · 看懂清晰度与帧率</h3>
+          <p>为什么同样的视频在不同设备上观感不同？专题以通俗的讲解拆解分辨率、码率与色彩之间的关系，帮助你在 PC91CC 官网入口中根据网络与设备选择更合适的播放设置。</p>
+          <a href="#faq" class="link-more">了解详情 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 社区动态 ================= -->
+<section class="section community" id="community">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Community</span>
+      <h2>社区正在发生</h2>
+      <p>在 PC91CC，观看从来不是一个人的体验。影迷们在这里留下对内容的理解与感受，也把发现的精彩分享给更多人。</p>
+    </div>
+    <div class="community-grid">
+      <div class="post-card reveal">
+        <div class="post-head">
+          <div class="avatar a1">林</div>
+          <div class="who"><div class="name">林岸</div><div class="time">12 分钟前</div></div>
+        </div>
+        <p>刚看完《星河彼岸的约定》，片尾那段长镜头太打动人了，光影的层次感很舒服，推荐在安静的时候一个人慢慢看。</p>
+        <div class="post-foot">
+          <span><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg> 236</span>
+          <span><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H6l-3 2 1-5a8 8 0 0117-5z"/></svg> 42</span>
+        </div>
+      </div>
+      <div class="post-card reveal">
+        <div class="post-head">
+          <div class="avatar a2">陈</div>
+          <div class="who"><div class="name">陈屿</div><div class="time">1 小时前</div></div>
+        </div>
+        <p>整理了一份「下饭纪录片」清单，都是节奏舒缓、画面好看的类型，适合周末在家放松。有补充的欢迎在评论区接力。</p>
+        <div class="post-foot">
+          <span><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg> 418</span>
+          <span><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H6l-3 2 1-5a8 8 0 0117-5z"/></svg> 87</span>
+        </div>
+      </div>
+      <div class="post-card reveal">
+        <div class="post-head">
+          <div class="avatar a3">周</div>
+          <div class="who"><div class="name">周与</div><div class="time">3 小时前</div></div>
+        </div>
+        <p>用 PC91CC 官网入口看科普类内容很方便，清晰度高、加载也快。最近把影像编码那一期看了三遍，讲得真清楚。</p>
+        <div class="post-foot">
+          <span><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg> 153</span>
+          <span><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H6l-3 2 1-5a8 8 0 0117-5z"/></svg> 31</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 入口面板 -->
+    <div class="entry-panel reveal" id="entry">
+      <div>
+        <h3>快速进入 PC91CC 官网入口</h3>
+        <p>无论使用电脑还是移动设备，都可以通过官网入口访问 PC91CC 的全部内容。首次访问建议先完成简单设置，以获得更流畅的观看体验。</p>
+        <div class="entry-steps">
+          <div class="entry-step"><span class="n">1</span>打开官网入口</div>
+          <div class="entry-step"><span class="n">2</span>选择内容频道</div>
+          <div class="entry-step"><span class="n">3</span>开始高清播放</div>
+        </div>
+      </div>
+      <div>
+        <div class="qr-box">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="入口二维码示意">
+            <rect width="100" height="100" fill="#fff"/>
+            <rect x="6" y="6" width="26" height="26" fill="#0a0e17"/>
+            <rect x="11" y="11" width="16" height="16" fill="#fff"/>
+            <rect x="15" y="15" width="8" height="8" fill="#0a0e17"/>
+            <rect x="68" y="6" width="26" height="26" fill="#0a0e17"/>
+            <rect x="73" y="11" width="16" height="16" fill="#fff"/>
+            <rect x="77" y="15" width="8" height="8" fill="#0a0e17"/>
+            <rect x="6" y="68" width="26" height="26" fill="#0a0e17"/>
+            <rect x="11" y="73" width="16" height="16" fill="#fff"/>
+            <rect x="15" y="77" width="8" height="8" fill="#0a0e17"/>
+            <rect x="40" y="8" width="6" height="6" fill="#0a0e17"/>
+            <rect x="50" y="14" width="6" height="6" fill="#0a0e17"/>
+            <rect x="40" y="24" width="6" height="6" fill="#0a0e17"/>
+            <rect x="54" y="22" width="6" height="6" fill="#0a0e17"/>
+            <rect x="38" y="36" width="6" height="6" fill="#0a0e17"/>
+            <rect x="48" y="40" width="6" height="6" fill="#0a0e17"/>
+            <rect x="60" y="34" width="6" height="6" fill="#0a0e17"/>
+            <rect x="70" y="44" width="6" height="6" fill="#0a0e17"/>
+            <rect x="82" y="40" width="6" height="6" fill="#0a0e17"/>
+            <rect x="44" y="54" width="6" height="6" fill="#0a0e17"/>
+            <rect x="56" y="58" width="6" height="6" fill="#0a0e17"/>
+            <rect x="68" y="54" width="6" height="6" fill="#0a0e17"/>
+            <rect x="80" y="58" width="6" height="6" fill="#0a0e17"/>
+            <rect x="38" y="68" width="6" height="6" fill="#0a0e17"/>
+            <rect x="50" y="72" width="6" height="6" fill="#0a0e17"/>
+            <rect x="64" y="70" width="6" height="6" fill="#0a0e17"/>
+            <rect x="76" y="74" width="6" height="6" fill="#0a0e17"/>
+            <rect x="44" y="84" width="6" height="6" fill="#0a0e17"/>
+            <rect x="58" y="86" width="6" height="6" fill="#0a0e17"/>
+            <rect x="72" y="86" width="6" height="6" fill="#0a0e17"/>
+            <rect x="86" y="84" width="6" height="6" fill="#0a0e17"/>
+          </svg>
+        </div>
+        <div class="qr-label">扫码直达 PC91CC 官网入口</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>常见问题</h2>
+      <p>关于 PC91CC 官网入口与平台使用，这里整理了一些用户常询问的问题，希望可以帮助你更快上手。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">PC91CC 官网入口可以在哪些设备上访问？<span class="chev">▾</span></button>
+        <div class="faq-a"><p>PC91CC 官网入口同时适配桌面浏览器与移动浏览器。在电脑上可以获得更大的观影画面，在手机上则更方便随时查看社区动态与内容更新，两种设备共用同一套账号体系。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">观看时画面卡顿怎么办？<span class="chev">▾</span></button>
+        <div class="faq-a"><p>可以在播放器中手动切换到与当前网络条件匹配的清晰度，同时建议关闭占用带宽的后台程序，并尽量使用稳定的网络连接。若持续出现异常，可稍后重新进入官网入口尝试。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">内容多久更新一次？<span class="chev">▾</span></button>
+        <div class="faq-a"><p>PC91CC 的内容频道保持日常更新节奏，影视剧场与纪实人文等频道会根据不同主题持续补充新内容，社区板块也会同步呈现最新讨论与推荐，方便用户第一时间发现新片。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">如何参与社区讨论？<span class="chev">▾</span></button>
+        <div class="faq-a"><p>完成账号注册后即可在内容下方发表评论、参与话题投票与分享收藏。社区鼓励真诚、友善、有价值的交流，让每一次讨论都能帮助其他影迷更好地选择内容。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">官网入口与普通页面有什么区别？<span class="chev">▾</span></button>
+        <div class="faq-a"><p>官网入口是进入 PC91CC 平台的统一窗口，汇集了内容频道、专题推荐、社区动态与使用帮助。通过官网入口访问，可以更完整地了解平台结构，并快速跳转到感兴趣的内容板块。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-final">
+  <div class="container">
+    <h2>现在就从 PC91CC 官网入口出发</h2>
+    <p>海量高清内容、友善的社区氛围、稳定流畅的播放体验，一切都已准备就绪。打开官网入口，开始你的下一次观影之旅。</p>
+    <div class="hero-actions">
+      <a href="#channels" class="btn-primary">浏览全部内容</a>
+      <a href="#entry" class="btn-ghost">查看入口说明</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 页脚 ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">P</span>
+          <span class="logo-text">PC91<span>CC</span></span>
+        </a>
+        <p>PC91CC 是一个面向影迷的视频内容与社区平台，致力于提供清晰、丰富、友善的观看与交流体验。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容</h4>
+        <a href="#channels">影视剧场</a>
+        <a href="#channels">纪实人文</a>
+        <a href="#channels">生活纪实</a>
+        <a href="#channels">知识科普</a>
+      </div>
+      <div class="foot-col">
+        <h4>平台</h4>
+        <a href="#features">平台优势</a>
+        <a href="#topics">精选专题</a>
+        <a href="#community">社区动态</a>
+        <a href="#entry">官网入口</a>
+      </div>
+      <div class="foot-col">
+        <h4>支持</h4>
+        <a href="#faq">常见问题</a>
+        <a href="#faq">播放帮助</a>
+        <a href="#faq">账号说明</a>
+        <a href="#faq">意见反馈</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2025 PC91CC · 保留所有权利</div>
+      <div class="links">
+        <a href="#faq">用户协议</a>
+        <a href="#faq">隐私说明</a>
+        <a href="#faq">内容声明</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// 移动端菜单
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('mobile-open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('mobile-open'));
+});
+
+// 频道筛选
+const tabBtns = document.querySelectorAll('.tab-btn');
+const videoCards = document.querySelectorAll('.video-card');
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.tab;
+    videoCards.forEach(card => {
+      const match = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = match ? 'block' : 'none';
+    });
+  });
+});
+
+// FAQ 折叠
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!open) {
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+// 滚动显现
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// 数字滚动
+function animateCount(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.querySelector('em') ? el.querySelector('em').outerHTML : '';
+  const duration = 1400;
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const val = Math.floor(target * eased);
+    el.innerHTML = val.toLocaleString('zh-CN') + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statNums = document.querySelectorAll('.hero-stats .num');
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCount(e.target);
+      statObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+statNums.forEach(el => statObserver.observe(el));
+</script>
+</body>
+                             </html>
